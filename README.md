@@ -24,6 +24,30 @@ Constructor:
 * `INA226(i2c_device, addr=0x40)` - Initializes the INA226 device; the driver also checks if the
 device is present.
 
+<details>
+<summary>I2C address</summary>
+
+| A1  | A0  | ADDRESS |
+|-----|-----|---------|
+| GND | GND | 0x40 |
+| GND | VS  | 0x41 |
+| GND | SDA | 0x42 |
+| GND | SCL | 0x43 |
+| VS  | GND | 0x44 |
+| VS  | VS  | 0x45 |
+| VS  | SDA | 0x46 |
+| VS  | SCL | 0x47 |
+| SDA | GND | 0x48 |
+| SDA | VS  | 0x49 |
+| SDA | SDA | 0x4A |
+| SDA | SCL | 0x4B |
+| SCL | GND | 0x4C |
+| SCL | VS  | 0x4D |
+| SCL | SDA | 0x4E |
+| SCL | SCL | 0x4F |
+
+</details><br>
+
 Public methods:
 
 * `set_current_lsb(current_LSB: float)` - Sets the calculation coefficient to determine the real
